@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--Pico-->
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
+      <!--Hoja de estilos-->
+      <link rel="stylesheet" href="../css/admin.css">
+    <title>Administración de Productos</title>
+</head>
+<body>
+    <main>
+        <div class="wrapper">
+            <aside class="nav"></aside>
+                <main class="content">
+                    <h1>Administración de productos</h1>
+
+                    <div>
+
+                    </div>
+
+                    <div class="table-Scroll">
+                        <table id="tableAdmin"  class="overflow-auto striped">
+                            <thead>
+                                <tr>
+                                    <th>Código</th>
+                                    <th>Imagen</th>
+                                    <th>Nombre</th>
+                                    <th>Categoría</th>
+                                    <th>Estilo</th>
+                                    <th>Marca</th>
+                                    <th>Talla</th>
+                                    <th>Stock</th>
+                                    <th>Precio</th>
+                                </tr>
+                            </thead>
+                            <tbody id="products-tbody">
+                                <!--Datos por medio del js-->
+                            </tbody>
+                        </table>
+                    </div>
+                </main>
+                <!--Popup para agregar-->
+                <dialog id="medAdd">
+                    <article>
+                        <header>
+                            <a href="#" class="close" id="btnCloseModal"></a>
+                            <h3>Agregar Productos</h3>
+                        </header>
+                        <form id="frmAddPro" class="ProductsForm">
+                            <label for="imageFile">
+                                <input type="file" id="imageFiel" accept="image/*">
+                            </label>
+                            <label for="name">Nombre
+                            <input type="text" id="txtName" placeholder="Nombre" required>
+                            </label>
+                            <label for="types">Categoría
+                            <input type="text" id="cmbTypes" placeholder="Categoría" required>
+                            </label>
+                            <label for="styles">Estilos
+                            <input type="text" id="cmbStyles" placeholder="Estilo" required>
+                            </label>
+                            <label for="company">Marca
+                            <input type="text" id="cmbCompany" placeholder="Marca" required>
+                            </label>
+                            <label for="size">Talla
+                            <input type="text" id="cmbSize" placeholder="Talla" required>
+                            </label>
+                            <label for="stock">Cantidad
+                            <input type="text" id="txtStock" placeholder="Cantidad" required>
+                            </label>
+                            <label for="price">Precio
+                            <input type="text" id="txtPrice" placeholder="Precio" required>
+                            </label>
+                        </form>
+                    </article>
+                </dialog>
+        </div>
+    </main>
+    <script src="../js/admin.js"></script>
+</body>
+</html>

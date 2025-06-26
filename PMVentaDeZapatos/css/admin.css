@@ -1,0 +1,13 @@
+h1{
+    margin-bottom: 0.8rem;
+    padding: 80px;
+}
+/*Formulario*/
+.ProductsForm{
+    margin-bottom: 1.8rem;
+}
+
+/*Tabla*/
+table img{
+    width: 10%;
+}
