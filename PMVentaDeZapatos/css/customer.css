@@ -1,0 +1,131 @@
+body{
+    font-family: 'montserrat', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.wrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+
+.content{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    padding: 20px 70px;
+    flex: 1;
+}
+
+.headerContent{
+    border-bottom: solid 1px #BBB;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 20px 30px;
+    gap: 10px;
+    flex: 1;
+}
+
+.txtSearch{
+    border-radius: 20px;
+    border: none;
+    background-color: #EEE;
+    padding: 10px;
+    width: 700px;
+    color: #000;
+    font-family: 'montserrat';
+    font-weight: 500;
+    font-size: 1em;
+}
+
+.btnShop{
+    background-color: transparent;
+    border: none;
+}
+
+.navSection{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 0;
+}
+
+h1{
+    font-weight: 400;
+    font-size: 2.8em;
+}
+
+.results{
+    font-weight: 500;
+}
+
+.contentSection{
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.card{
+    display: flex;
+    background-color: #eee;
+    flex-direction: column;
+    width: 300px;
+    height: 400px;
+}
+
+.imgShoe{
+    width: 100%;
+    height: 200px;
+}
+
+.bodyCard{
+    display: flex;
+    flex: 1;
+}
+
+.infoContainerCard{
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex: 1;
+}
+
+.btnAddContainer{
+    flex: 1;
+}
+
+.brandShoe{
+    font-size: 1.1em;
+}
+
+.modelShoe{
+    font-size: 1.3em;
+    font-weight: 500;
+}
+
+.priceShoe{
+    color: #F2640C;
+}
+
+.btnAddContainer{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+
+.btnAddShoe{
+    padding: 15px 25px;
+    border-radius: 20px;
+    color: #FFF;
+    background-color: #E54741;
+    border: none;
+    font-size: 1.2em;
+}
