@@ -28,7 +28,7 @@ function LoadTable(products){
             <td>${products.precio}</td>
             <td>
             <button onclick = "('${products.id}')" class = "btn-Button">Editar</button>
-        <button onclick = "('${products.id}')">Eliminar</button>
+        <button onclick = "('${products.id}')" class = "btn-Button">Eliminar</button>
             </tr>
             `;
     });
