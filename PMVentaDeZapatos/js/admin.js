@@ -27,7 +27,7 @@ function LoadTable(products){
             <td>${products.stock}</td>
             <td>${products.precio}</td>
             <td>
-            <button onclick = "('${products.id}')">Editar</button>
+            <button onclick = "('${products.id}')" class = "btn-Button">Editar</button>
         <button onclick = "('${products.id}')">Eliminar</button>
             </tr>
             `;
@@ -35,3 +35,14 @@ function LoadTable(products){
 }
 LoadProducts();
 window.addEventListener('DOMContentLoaded', LoadProducts);
+
+const modal = document.getElementById("medAdd");
+const btnAgregar = document.getElementById("btnAgregar");
+const btnCerrar = document.getElementById("btnCerrar");
+
+btnAgregar.addEventListener("click", () => {
+    modal.showModal();
+})
+btnCerrar.addEventListener("click", () => {
+    modal.closeModal();
+})
