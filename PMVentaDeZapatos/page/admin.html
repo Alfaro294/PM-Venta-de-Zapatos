@@ -5,6 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administración de Productos</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
     <link rel="stylesheet" href="../css/admin.css">
     <link rel="stylesheet" href="../css/nav.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -51,31 +52,33 @@
         </main>
     </div>
 
-    <!--Modal-->
+    <!--Modal para agregar-->
     <dialog id="medAdd">
         <article>
             <header>
-                <a href="#" class="close" id="btnCloseModal"></a>
+                <a href="#" class="close" id="btn-Cerrar"></a>
                 <h3>Agregar Producto</h3>
             </header>
             <form id="frmAddPro" class="ProductsForm">
+                <input type="hidden" id="product-id" />
                 <label>Imagen
-                    <input type="file" id="imageFiel" accept="image/*">
+                    <input type="file" id="imagen-file" accept="image/*">
                 </label>
+                <input type="hidden" id="imagen-url" />
                 <label>Nombre
                     <input type="text" id="txtName" placeholder="Nombre" required>
                 </label>
                 <label>Categoría
-                    <input type="text" id="cmbTypes" placeholder="Categoría" required>
+                    <input type="text" id="txtTypes" placeholder="Categoría" required>
                 </label>
                 <label>Estilo
-                    <input type="text" id="cmbStyles" placeholder="Estilo" required>
+                    <input type="text" id="txtStyles" placeholder="Estilo" required>
                 </label>
                 <label>Marca
-                    <input type="text" id="cmbCompany" placeholder="Marca" required>
+                    <input type="text" id="txtCompany" placeholder="Marca" required>
                 </label>
                 <label>Talla
-                    <input type="text" id="cmbSize" placeholder="Talla" required>
+                    <input type="text" id="txtSize" placeholder="Talla" required>
                 </label>
                 <label>Cantidad
                     <input type="number" id="txtStock" placeholder="Cantidad" required>
@@ -83,6 +86,8 @@
                 <label>Precio
                     <input type="text" id="txtPrice" placeholder="Precio" required>
                 </label>
+                <button type="submit" class="btn btn-primary">Guardar Producto</button>
+
             </form>
         </article>
     </dialog>
