@@ -68,16 +68,15 @@ h1{
 
 .contentSection{
     display: flex;
-    justify-content: center;
     gap: 40px;
     flex-wrap: wrap;
 }
 
 .card{
     display: flex;
-    background-color: #eee;
+    background-color: #f7f7f7;
     flex-direction: column;
-    width: 300px;
+    width: 20%;
     height: 400px;
 }
 
@@ -128,4 +127,10 @@ h1{
     background-color: #E54741;
     border: none;
     font-size: 1.2em;
+    cursor: pointer;
+    transition: .5s;
+}
+
+.btnAddShoe:hover{
+    opacity: .6;
 }
