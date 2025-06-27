@@ -1,13 +1,79 @@
-h1{
-    margin-bottom: 0.8rem;
-    padding: 80px;
-}
-/*Formulario*/
-.ProductsForm{
-    margin-bottom: 1.8rem;
+body {
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
 }
 
-/*Tabla*/
-table img{
-    width: 10%;
+.wrapper {
+  display: flex;
+  height: 100vh;
+}
+
+h1{
+    margin-bottom: 0.10rem;
+    padding: 80px;
+}
+.content {
+  flex: 1;
+  padding: 40px;
+  overflow-y: auto;
+}
+
+.txtSearch{
+    border-radius: 20px;
+    border: none;
+    background-color: #EEE;
+    padding: 15px;
+    margin-bottom: 5%;
+    width: 90%;
+    color: #000;
+    font-family: 'montserrat';
+    font-weight: 500;
+    font-size: 1em;
+}
+
+
+#tableAdmin {
+  width: 100%;
+  min-width: 800px;
+  font-size: 14px;
+}
+.btn-action {
+  background-color: #e86f61;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 6px 10px;
+  margin: 2px;
+  font-size: 14px;
+  cursor: pointer;
+}
+/*Botón flotante*/
+.add-button{
+    position: fixed; /*El boton queda flotante sobre el contenido*/
+
+    bottom: 30px;/*Separación desde abajo*/
+    right: 40px;/*Separación desde la derecha*/
+    background-color: #E54741;/*Color del fondo del boton*/
+    color: white;/*color del icono*/
+    border-radius: 50%; /*para redondear el boton*/
+    border: none;/*Removemos bordes por defecto*/
+    width: 90px;
+    height: 90px; /*Dimensiones para hacer simétrico el botón*/
+
+    box-shadow: 0 4px 10px rgba(0,0,0,0.5);/*Sombra del botón*/
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    z-index: 1001; /*Para que el boton siempre quede encima del resto del contenido*/
+    transition: transform 0.4s;/*Duración del efecto*/
+}
+
+.add-button:hover{
+    transform: scale(1.2);/*Crecimiento del boton*/
+}
+
+.tabla-scroll{
+    overflow-x: auto; /*Colocar un scroll horizontal a la tabla*/
 }

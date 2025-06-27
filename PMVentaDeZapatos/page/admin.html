@@ -1,27 +1,32 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Pico-->
-      <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css" />
-      <!--Hoja de estilos-->
-      <link rel="stylesheet" href="../css/admin.css">
     <title>Administración de Productos</title>
+    <link rel="stylesheet" href="../css/admin.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
 </head>
+
 <body>
-    <main>
-        <div class="wrapper">
-            <aside class="nav"></aside>
-                <main class="content">
-                    <h1>Administración de productos</h1>
-
-                    <div>
-
-                    </div>
-
+    <div class="wrapper">
+        <aside id="nav"></aside>
+        <main class="content">
+            <div class="navSection">
+                <h1>Administración de productos</h1>
+            </div>
+            <div class="headerContent">
+                <input type="text" class="txtSearch" placeholder="Buscar producto...">
+            </div>
+            <div class="bodyContent">
+                <div class="contentSection">
                     <div class="table-Scroll">
-                        <table id="tableAdmin"  class="overflow-auto striped">
+                        <table id="tableAdmin" class="striped">
                             <thead>
                                 <tr>
                                     <th>Código</th>
@@ -33,6 +38,7 @@
                                     <th>Talla</th>
                                     <th>Stock</th>
                                     <th>Precio</th>
+                                    <th>Acciones</th>
                                 </tr>
                             </thead>
                             <tbody id="products-tbody">
@@ -40,44 +46,63 @@
                             </tbody>
                         </table>
                     </div>
-                </main>
-                <!--Popup para agregar-->
-                <dialog id="medAdd">
-                    <article>
-                        <header>
-                            <a href="#" class="close" id="btnCloseModal"></a>
-                            <h3>Agregar Productos</h3>
-                        </header>
-                        <form id="frmAddPro" class="ProductsForm">
-                            <label for="imageFile">
-                                <input type="file" id="imageFiel" accept="image/*">
-                            </label>
-                            <label for="name">Nombre
-                            <input type="text" id="txtName" placeholder="Nombre" required>
-                            </label>
-                            <label for="types">Categoría
-                            <input type="text" id="cmbTypes" placeholder="Categoría" required>
-                            </label>
-                            <label for="styles">Estilos
-                            <input type="text" id="cmbStyles" placeholder="Estilo" required>
-                            </label>
-                            <label for="company">Marca
-                            <input type="text" id="cmbCompany" placeholder="Marca" required>
-                            </label>
-                            <label for="size">Talla
-                            <input type="text" id="cmbSize" placeholder="Talla" required>
-                            </label>
-                            <label for="stock">Cantidad
-                            <input type="text" id="txtStock" placeholder="Cantidad" required>
-                            </label>
-                            <label for="price">Precio
-                            <input type="text" id="txtPrice" placeholder="Precio" required>
-                            </label>
-                        </form>
-                    </article>
-                </dialog>
-        </div>
-    </main>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!--Modal-->
+    <dialog id="medAdd">
+        <article>
+            <header>
+                <a href="#" class="close" id="btnCloseModal"></a>
+                <h3>Agregar Producto</h3>
+            </header>
+            <form id="frmAddPro" class="ProductsForm">
+                <label>Imagen
+                    <input type="file" id="imageFiel" accept="image/*">
+                </label>
+                <label>Nombre
+                    <input type="text" id="txtName" placeholder="Nombre" required>
+                </label>
+                <label>Categoría
+                    <input type="text" id="cmbTypes" placeholder="Categoría" required>
+                </label>
+                <label>Estilo
+                    <input type="text" id="cmbStyles" placeholder="Estilo" required>
+                </label>
+                <label>Marca
+                    <input type="text" id="cmbCompany" placeholder="Marca" required>
+                </label>
+                <label>Talla
+                    <input type="text" id="cmbSize" placeholder="Talla" required>
+                </label>
+                <label>Cantidad
+                    <input type="number" id="txtStock" placeholder="Cantidad" required>
+                </label>
+                <label>Precio
+                    <input type="text" id="txtPrice" placeholder="Precio" required>
+                </label>
+            </form>
+        </article>
+    </dialog>
+
+    <!--Visualización del boton flotante-->
+    <button class="add-button" id="btnAgregar" title="Agregar Producto">
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none"
+            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+            class="lucide lucide-package-plus-icon lucide-package-plus">
+            <path d="M16 16h6" />
+            <path d="M19 13v6" />
+            <path
+                d="M21 10V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l2-1.14" />
+            <path d="m7.5 4.27 9 5.15" />
+            <polyline points="3.29 7 12 12 20.71 7" />
+            <line x1="12" x2="12" y1="22" y2="12" />
+        </svg></button>
+
+    <script src="../js/nav.js"></script>
     <script src="../js/admin.js"></script>
 </body>
+
 </html>
